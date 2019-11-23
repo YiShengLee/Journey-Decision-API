@@ -18,15 +18,15 @@
     transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
   }
 
-  .toggleWrapper {
-    /* margin: auto; */
-    /* padding: 20px; */
-    /* width: 90px; */
-    /* border: 1px solid #d3d3d3; */
-    /* margin-top: 10px; */
-    /* border-radius: 5px; */
-    /* background: rgb(247, 247, 247); */
-  }
+  /* .toggleWrapper {
+    margin: auto;
+    padding: 20px;
+    width: 90px;
+    border: 1px solid #d3d3d3;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: rgb(247, 247, 247);
+  } */
 
   .toggleWrapper input.mobileToggle {
     opacity: 0;

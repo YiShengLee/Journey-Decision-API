@@ -47,3 +47,8 @@ $(document).ready(function () {
   });
 
 });
+
+
+$( "#toggle1" ).click(function() {
+  $( "#map" ).toggle();
+});
