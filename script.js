@@ -17,23 +17,31 @@ $(document).ready(function () {
     // testing if the preventDefault working
     // console.log("form...");
     var location = $("#location").val();
-    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
-    $.ajax({url: url, success: function(result){
-      console.log(result["results"][0]["geometry"]["location"])
-      var newLocation = result["results"][0]["geometry"]["location"];
+    
 
-    var marker = new google.maps.Marker({
-        position: newLocation,
+    // var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
+    $.ajax({url: url, success: function(result){
+      // console.log(result["results"][0]["geometry"]["location"]);
+      // console.log(google.maps.GeocoderStatus);
+      // var newmap = result["results"][0]["geometry"]["location"];
+
+    if (google.maps.GeocoderStatus.OK == "OK"){
+      var newmap = result["results"][0]["geometry"]["location"];
+            var marker = new google.maps.Marker({
+        position: newmap,
         map: map
         // zoom: 20
     });
-    map.setCenter(newLocation);
+    map.setCenter(newmap);
     map.setZoom(18);
+    // map.panTo(marker.position);
+    }
+    else{
+      alert('Geocode was not successful for the following reason: ' + google.maps.GeocoderStatus.OK);
+    };
+
     }});
 
-    
-    //get textbox val
-    //do ajaxrequest w textbox val
 
 
   });
