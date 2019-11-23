@@ -14,20 +14,10 @@
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/Project 2/images/favicon.ico" type="image/x-icon">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap" rel="stylesheet">
 
-    <style>
-        #map {
-            height: 100%;
-        }
 
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -72,11 +62,11 @@
     </nav>
 
     <h1>Location Status</h1>
-    
+
     <!-- Botton Section -->
     <div class="toggleWrapper">
-        <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1" checked>
-        <label for="toggle1"></label>
+        <input type="checkbox" name="toggle" class="mobileToggle" id="toggle" checked>
+        <label for="toggle"></label>
     </div>
 
     <form id="frm">
@@ -87,13 +77,51 @@
         <input type="submit" name="submit" id="submit" value="Search">
     </form>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left col-3">
+                First columns
+                <div class="row">
+                    <div class="col">
+                        <span class="title">Map:</span>
+                    </div>
+                    <div class="col">
+                        <div class="toggleWrapper">
+                            <input type="checkbox" name="toggle" class="mobileToggle" id="toggle1" checked>
+                            <label for="toggle1"></label>
+                        </div>
+                    </div>
+                </div>
 
-    <div id="map"></div>
-    <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
+                <!-- <div class="row">
+                    <div class="col">
+                        <span class="title">Weather:</span>
+                    </div>
+                    <div class="col">
+                        <div class="toggleWrapper">
+                            <input type="checkbox" name="toggle" class="mobileToggle" id="toggle2" checked>
+                            <label for="toggle2"></label>
+                        </div>
+                    </div>
+                </div> -->
 
-    <!-- Testing -->
+            </div>
+            <div class="right col-9">
+                Second columns
+                <div id="map" class="map"></div>
+                <div>Next Data</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Testing
     <p class="test">Hello World!!!</p>
-    <span class="test1">Testing</span> <br> <br>
+    <span class="test1">Testing</span> <br> <br> -->
 
 
     <script src="/Project 2/js/jquey.js"></script>
