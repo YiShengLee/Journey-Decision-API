@@ -69,13 +69,6 @@
         <label for="toggle"></label>
     </div>
 
-    <form id="frm">
-
-        Location: <br>
-        <input type="text" name="location" id="location">
-
-        <input type="submit" name="submit" id="submit" value="Search">
-    </form>
 
     <div class="container-fluid">
         <div class="row">
@@ -85,6 +78,7 @@
                     <div class="col">
                         <span class="title">Map:</span>
                     </div>
+                    <!-- Map Button -->
                     <div class="col">
                         <div class="toggleWrapper">
                             <input type="checkbox" name="toggle" class="mobileToggle" id="toggle1" checked>
@@ -93,17 +87,31 @@
                     </div>
                 </div>
 
-                <!-- <div class="row">
+                <div class="row">
                     <div class="col">
                         <span class="title">Weather:</span>
                     </div>
+                    <!-- Weather Button -->
                     <div class="col">
                         <div class="toggleWrapper">
                             <input type="checkbox" name="toggle" class="mobileToggle" id="toggle2" checked>
                             <label for="toggle2"></label>
                         </div>
                     </div>
-                </div> -->
+                </div>
+
+                <div class="countrytxt">Country: <span id="country" class="country"></span></div> <br>
+
+                <div class="currSummarytxt">Your location Weather: <span id="currSummary" class="currSummary"></span></div> <br>
+                
+
+                <form id="frm">
+                    Address: <br>
+                    <input type="text" name="location" id="location" placeholder="Your Destination Address">
+
+                    <input type="submit" name="submit" id="submit" value="Search">
+                </form>
+
 
             </div>
             <div class="right col-9">
