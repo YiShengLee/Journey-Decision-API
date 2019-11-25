@@ -79,23 +79,23 @@ $.getJSON('https://ipapi.co/json/', function (data) {
 
 
 // // Weather API
-// function weather() {
-//   var settings = {
-//     "async": true,
-//     "crossDomain": true,
-//     "dataType": "jsonp",
-//     // "url": "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + lat + "," + long ,
-//     "url": "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + latitudeCurrent + "," + longtitudeCurrent,
-//     "method": "GET"
-//   }
+function weather() {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "dataType": "jsonp",
+    // "url": "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + lat + "," + long ,
+    "url": "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + latitudeCurrent + "," + longtitudeCurrent,
+    "method": "GET"
+  }
 
-//   $.ajax(settings).done(function (forecast) {
-//     var summary = forecast["currently"]["summary"];
-//     console.log(summary);
-//     $("#currSummary").html(summary);
-//     // console.log(response);
-//   });
-// }
+  $.ajax(settings).done(function (forecast) {
+    var summary = forecast["currently"]["summary"];
+    console.log(summary);
+    $("#currSummary").html(summary);
+    // console.log(response);
+  });
+}
 
 
 
