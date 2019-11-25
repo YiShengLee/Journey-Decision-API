@@ -52,16 +52,16 @@ $(document).ready(function () {
 
 });
 
-$.ajax({
-  type: "GET",
-  datatype: "json",
-  url:"https://ipapi.co/8.8.8.8/json/",
+// $.ajax({
+//   type: "GET",
+//   datatype: "json",
+//   url:"https://ipapi.co/8.8.8.8/json/",
 
-  success: function (data) {
-    console.log(data);
-  }
+//   success: function (data) {
+//     console.log(data);
+//   }
 
-});
+// });
 var latitudeCurrent;
 var longtitudeCurrent;
 
