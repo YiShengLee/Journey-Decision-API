@@ -112,3 +112,14 @@ text-align: left;
 /* .right{
     height: 80vh;
 } */
+
+/* change the image in carousel */
+.imgc{
+    height: 300px;
+}
+
+/* Change the carousel size */
+.carousel {
+    width:300px;
+    /* height:360px; */
+  }
