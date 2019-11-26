@@ -91,9 +91,9 @@ function weather() {
 
   $.ajax(settings).done(function (forecast) {
     var summary = forecast["currently"]["summary"];
-    console.log(summary);
+    // console.log(summary); // Check if the Weather API Work
     $("#currSummary").html(summary);
-    // console.log(response);
+    console.log(forecast);
   });
 }
 
