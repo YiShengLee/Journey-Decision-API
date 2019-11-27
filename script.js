@@ -66,11 +66,11 @@ var latitudeCurrent;
 var longtitudeCurrent;
 
 // Ipappi Section 
-$.getJSON('https://ipapi.co/json/', function (data) {
+$.getJSON('https://ipapi.co/json/', function (ipaddress) {
   // console.log(data);
-  var country = data.city;
-  latitudeCurrent = data.latitude;
-  longtitudeCurrent = data.longitude;
+  var country = ipaddress.city;
+  latitudeCurrent = ipaddress.latitude;
+  longtitudeCurrent = ipaddress.longitude;
   $("#country").html(country)
   weather()
   // console.log("lat" + latitudeCurrent);
@@ -78,7 +78,7 @@ $.getJSON('https://ipapi.co/json/', function (data) {
 });
 
 
-// // Weather API
+// Weather API
 function weather() {
   var settings = {
     "async": true,
@@ -89,19 +89,48 @@ function weather() {
     "method": "GET"
   }
 
-  $.ajax(settings).done(function (forecast) {
-    var summary = forecast["currently"]["summary"];
+  $.ajax(settings).done(function (data) {
+    var summary = data["currently"]["summary"];
     // console.log(summary); // Check if the Weather API Work
+    var weathericon = data["currently"]["icon"]
     $("#currSummary").html(summary);
-    console.log(forecast);
+
+    $("#weathericon").html(weathericon);
+    // Change the icon image
+    $("canvas").attr("id",weathericon);
+    console.log(data);
+    
+
+    var icons = new Skycons({
+      "color": "blue"
+    });
+
+    icons.set("clear-day", Skycons.CLEAR_DAY);
+    icons.set("clear-night", Skycons.CLEAR_NIGHT);
+    icons.set("partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
+    icons.set("partly-cloudy-night", Skycons.PARTLY_CLOUDY_NIGHT);
+    icons.set("cloudy", Skycons.CLOUDY);
+    icons.set("rain", Skycons.RAIN);
+    icons.set("sleet", Skycons.SLEET);
+    icons.set("snow", Skycons.SNOW);
+    icons.set("wind", Skycons.WIND);
+    icons.set("fog", Skycons.FOG);
+
+    icons.play();
+
   });
-}
+
+};
 
 
 
 // Toggle Section
 
-// Toggle Section Button
+// Toggle Map Button
 $("#toggle1").click(function () {
   $("#map").toggle();
 });
+
+// $("#toggle2").click(function () {
+//   $("#weathericon").toggle();
+// });

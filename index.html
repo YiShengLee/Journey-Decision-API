@@ -107,6 +107,12 @@
                 <div class="currSummarytxt">Your location Weather: <span id="currSummary" class="currSummary"></span>
                 </div> <br>
 
+                <!-- Weather Icon -->
+                <figure class="icons">
+                    <canvas id="weathericon" width="64" height="64"></canvas>
+
+                </figure>
+
 
                 <form id="frm">
                     Address: <br>
@@ -116,8 +122,63 @@
                 </form> <br> <br>
 
                 <span>Your current location Weather!</span>
+
+                <!-- DarkSkyi Section -->
+                <!-- <div class="city ">
+
+                        <div class="card container">
+                      
+                          <div class="city-title ">
+                            <span id="location"> </span>
+                          </div>
+                          <hr />
+                          <div class="city-weather-temperature loader">
+                            <span class="celsius fahrenheit-btn "></span>
+                            <span class="fahrenheit celsius-btn"></span>
+                          </div>
+                      
+                          <div class="city-weather-description">
+                            <span id="icon"></span><br>
+                            <span id="description"></span>
+                          </div>
+                      
+                          <div class="bottom">
+                            <div class="nav-info clearfix">
+                              <div class="add-info">
+                                <ul id="details">
+                                  <li>
+                                   <span id="todayC"> </span>
+                                    <span id="todayF"> </span>
+                                  </li>
+                                  <li>
+                                    <span id="tomorrowC"> </span>
+                                    <span id="tomorrowF"> </span>
+                                  </li>
+                                  <li>
+                                    <span id="afterTomorrowC"> </span>
+                                    <span id="afterTomorrowF"> </span>
+                                  </li>
+                                  <li>
+                                    <span id="afterAfterTomorrowC"> </span>
+                                    <span id="afterAfterTomorrowF"> </span>
+                                  </li>
+                                  
+                                </ul>
+                                  
+                              </div>  
+                              <div><span class="date"> </span> <a href="http://forecast.io" id="forio">Powered by Dark Sky</a></div>
+                            </div> 
+                      
+                          </div> 
+                      
+                        </div>
+                      </div> -->
+
+
+
+
                 <!-- Carousel Section -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -126,17 +187,21 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <!-- <img src="https://via.placeholder.com/100" class="d-block w-100" alt="..."> -->
-                            <img src="/Project 2/images/Test_1.jpg" class="imgc d-block w-100" alt="Today Weather Forecast">
+                            <img src="https://via.placeholder.com/100" class="d-block w-100" alt="...">
+                            <img src="/Project 2/images/Test_1.jpg" class="imgc d-block w-100"
+                                alt="Today Weather Forecast">
                         </div>
                         <div class="carousel-item">
-                            <img src="/Project 2/images/Test_2.jpg" class="imgc d-block w-100" alt="1 Day Later Weather Forecast">
+                            <img src="/Project 2/images/Test_2.jpg" class="imgc d-block w-100"
+                                alt="1 Day Later Weather Forecast">
                         </div>
                         <div class="carousel-item">
-                            <img src="/Project 2/images/Test_3.jpg" class="imgc d-block w-100" alt="2 Day Later Weather Forecast">
+                            <img src="/Project 2/images/Test_3.jpg" class="imgc d-block w-100"
+                                alt="2 Day Later Weather Forecast">
                         </div>
                         <div class="carousel-item">
-                            <img src="/Project 2/images/Test_4.jpg" class="imgc d-block w-100" alt="3 Day Later Weather Forecast">
+                            <img src="/Project 2/images/Test_4.jpg" class="imgc d-block w-100"
+                                alt="3 Day Later Weather Forecast">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -147,7 +212,7 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
+                </div> -->
 
 
             </div>
@@ -159,6 +224,23 @@
 
         </div>
     </div>
+
+    <!-- Type of Weather icon
+    <figure class="icons">
+        <canvas id="clear-day" width="64" height="64"></canvas>
+        <canvas id="clear-night" width="64" height="64"></canvas>
+        <canvas id="partly-cloudy-day" width="64" height="64"></canvas>
+        <canvas id="partly-cloudy-night" width="64" height="64"></canvas>
+        <canvas id="cloudy" width="64" height="64"></canvas>
+        <canvas id="rain" width="64" height="64"></canvas>
+        <canvas id="sleet" width="64" height="64"></canvas>
+        <canvas id="snow" width="64" height="64"></canvas>
+        <canvas id="wind" width="64" height="64"></canvas>
+        <canvas id="fog" width="64" height="64"></canvas>
+    </figure> -->
+    
+    
+    
 
 
 
@@ -176,10 +258,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
 
     <!-- Added Bootstrap -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -194,6 +272,9 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4&callback=initMap">
     </script>
+
+    <!-- skycons Icon -->
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
 
 </body>
 
