@@ -373,3 +373,14 @@ height: 15px; */
 .decision{
   height: 100px;
 }
+
+.header{
+  background: url(/Project\ 2/images/Worldmap.jpg);
+  display: flex;
+  justify-content: center;
+}
+
+.word{
+  font-size: 50px;
+  text-align:center ;
+}
