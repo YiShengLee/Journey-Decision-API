@@ -182,8 +182,79 @@ $(document).ready(function () {
         icons.play();
 
         //bloody timeout so you can see the loading bars
+        setTimeout(function () {
+          $("#icon").html("<i class=\"" + icon + "\">");
+          $("#description").html(description);
+          $("#humidity").html(humidity);
+          $("#wind").html(wind);
+          $(".celsius").html(celsius);
+          $(".fahrenheit").html(fahrenheit);
+
+          //today forecast in C
+          var todayMaxTemp = data.daily.data[0].temperatureMax.toFixed(0);
+          var todayMinTemp = data.daily.data[0].temperatureMin.toFixed(0);
+          var todayIcon = data.daily.data[0].icon;
+          $("#todayC").html("<br>" + todayMinTemp + "&deg;/" + todayMaxTemp + "&deg; <br> <i class=\"" + todayIcon + "\" id=\"smallIcon\">");
+
+          // console.log(todayIcon);
+
+          getWeatherIcon(todayIcon, w, "day1");
+
+          //tomorrow forecast in C
+          var tomorrowMaxTemp = data.daily.data[1].temperatureMax.toFixed(0);
+          var tomorrowMinTemp = data.daily.data[1].temperatureMin.toFixed(0);
+          var tomorrowIcon = data.daily.data[1].icon;
+          $("#tomorrowC").html("<br>" + tomorrowMinTemp + "&deg;/" + tomorrowMaxTemp + "&deg; <br> ");
 
 
+
+
+          // console.log(tomorrowIcon);
+          getWeatherIcon(tomorrowIcon, w, "day2");
+
+          //after tomorrow forecast in C
+          var afterTomorrowMaxTemp = data.daily.data[2].temperatureMax.toFixed(0);
+          var afterTomorrowMinTemp = data.daily.data[2].temperatureMin.toFixed(0);
+          var afterTomorrowIcon = data.daily.data[2].icon;
+          $("#afterTomorrowC").html("<br>" + afterTomorrowMinTemp + "&deg;/" + afterTomorrowMaxTemp + "&deg; <br> <i class=\"" + afterTomorrowIcon + "\" id=\"smallIcon\">");
+
+          getWeatherIcon(afterTomorrowIcon, w, "day3");
+
+          //after after tomorrow forecast in C :))
+          var afterAfterTomorrowMaxTemp = data.daily.data[3].temperatureMax.toFixed(0);
+          var afterAfterTomorrowMinTemp = data.daily.data[3].temperatureMin.toFixed(0);
+          var afterAfterTomorrowIcon = data.daily.data[3].icon;
+          $("#afterAfterTomorrowC").html("<br>" + afterAfterTomorrowMinTemp + "&deg;/" + afterAfterTomorrowMaxTemp + "&deg; <br> <i class=\"" + afterAfterTomorrowIcon + "\" id=\"smallIcon\">");
+
+          getWeatherIcon(afterAfterTomorrowIcon, w, "day4");
+
+        }, 2200); // end of timeout 
+
+        //temp toggle 
+        $(".fahrenheit-btn").on("click", function () {
+          $(".celsius").hide();
+          $("#todayC").hide();
+          $("#tomorrowC").hide();
+          $("#afterTomorrowC").hide();
+          $("#afterAfterTomorrowC").hide();
+          $(".fahrenheit").show(fahrenheit);
+          $("#todayF").show();
+          $("#tomorrowF").show();
+          $("#afterTomorrowF").show();
+          $("#afterAfterTomorrowF").show();
+        });
+        $(".celsius-btn").on("click", function () {
+          $(".fahrenheit").hide();
+          $("#todayF").hide();
+          $("#tomorrowF").hide();
+          $("#afterTomorrowF").hide();
+          $("#afterAfterTomorrowF").hide();
+          $(".celsius").show(celsius);
+          $("#todayC").show();
+          $("#tomorrowC").show();
+          $("#afterTomorrowC").show();
+          $("#afterAfterTomorrowC").show();
+        });
 
         //  end of temp toggle  
       });
@@ -192,6 +263,7 @@ $(document).ready(function () {
   } else {
     alert("We couldn` retrieve your location, please check your location settings");
   };
+
 
 
 
