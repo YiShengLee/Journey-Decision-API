@@ -194,16 +194,6 @@ $(document).ready(function () {
           var todayMaxTemp = data.daily.data[0].temperatureMax.toFixed(0);
           var todayMinTemp = data.daily.data[0].temperatureMin.toFixed(0);
           var todayIcon = data.daily.data[0].icon;
-          $("#todayC").html("<br>" + todayMinTemp + "&deg;/" + todayMaxTemp + "&deg; <br>");
-
-          // console.log(todayIcon);
-
-          getWeatherIcon(todayIcon, w, "day1");
-
-          //tomorrow forecast in C
-          var todayMaxTemp = data.daily.data[0].temperatureMax.toFixed(0);
-          var todayMinTemp = data.daily.data[0].temperatureMin.toFixed(0);
-          var todayIcon = data.daily.data[0].icon;
           $("#todayC").html("<br>" + todayMinTemp + "&deg;/" + todayMaxTemp + "&deg; <br> <i class=\"" + todayIcon + "\" id=\"smallIcon\">");
           //today forecast in F 
           var todayMaxTemp = (data.daily.data[0].temperatureMax * 9 / 5 + 32).toFixed(0);
@@ -295,8 +285,32 @@ $(document).ready(function () {
   };
 
 
+  //date //
+  var months = new Array(12);
+  months[0] = "January";
+  months[1] = "February";
+  months[2] = "March";
+  months[3] = "April";
+  months[4] = "May";
+  months[5] = "June";
+  months[6] = "July";
+  months[7] = "August";
+  months[8] = "September";
+  months[9] = "October";
+  months[10] = "November";
+  months[11] = "December";
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth(); //January is 0!
+  var yyyy = today.getFullYear();
 
+  if (dd < 10) {
+    dd = '0' + dd
+  }
 
+  today = dd + '. ' + months[mm] + ', ' + yyyy;
+  $(".date").html(today);
+  //end date
 
 
 
