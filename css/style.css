@@ -380,7 +380,24 @@ height: 15px; */
   justify-content: center;
 }
 
+/* Set the css for header */
 .word{
-  font-size: 50px;
+  font-size: 70px;
+  color: rgb(112, 81, 52);
   text-align:center ;
+  font-family: "BeautyMountains";
+  padding-right: 50px;
+  /* opacity: 0.8; */
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  
 }
+
+/* font type word */
+@font-face {
+  font-family: 'BeautyMountains';
+  src: url('/Project\ 2/fonts/BeautyMountains.ttf');
+}  

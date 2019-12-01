@@ -133,7 +133,7 @@ $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(function (location) {
       latitude = location.coords.latitude;
       longitude = location.coords.longitude;
-      console.log(latitude + " " + longitude);
+      // console.log(latitude + " " + longitude);
 
       var geolocation = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
 
