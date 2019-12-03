@@ -407,8 +407,18 @@ height: 15px; */
   src: url('/Project\ 2/fonts/BeautyMountains.ttf');
 }  
 
+/* Set the weather Legend */
 .box{
   display: inline-block;
   /* border: 1px solid black; */
   padding: 10px;
+}
+
+.display{
+  text-align: center;
+}
+
+.weathertxt{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
 }

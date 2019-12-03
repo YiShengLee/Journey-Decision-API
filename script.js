@@ -126,7 +126,7 @@ $(document).ready(function () {
   }
 
   // Display all the weather icon information
-  var display = new Skycons({"color": "orange"});
+  var display = new Skycons({"color": "black"});
 
   display.set("clear-day", Skycons.CLEAR_DAY);
   display.set("clear-night", Skycons.CLEAR_NIGHT);
