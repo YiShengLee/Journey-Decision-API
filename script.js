@@ -101,28 +101,45 @@ $(document).ready(function () {
   // Put the variable in a list
   var w = [Skycons.CLEAR_DAY, Skycons.CLEAR_NIGHT, Skycons.PARTLY_CLOUDY_DAY, Skycons.PARTLY_CLOUDY_NIGHT, Skycons.CLOUDY, Skycons.RAIN, Skycons.SLEET, Skycons.SNOW, Skycons.WIND, Skycons.FOG];
 
+
   // Set the IF condition for weather
   function getWeatherIcon(condition, w, day) {
     if (condition === "clear-day") {
       icons.set(day, w[0]);
-    } else if (condition == "clear-night") {
+    } else if (condition === "clear-night") {
       icons.set(day, w[1]);
-    } else if (condition == "partly-cloudy-day") {
+    } else if (condition === "partly-cloudy-day") {
       icons.set(day, w[2]);
-    } else if (condition == "partly-cloudy-night") {
+    } else if (condition === "partly-cloudy-night") {
       icons.set(day, w[3]);
-    } else if (condition == "cloudy") {
+    } else if (condition === "cloudy") {
       icons.set(day, w[4]);
-    } else if (condition == "rain") {
+    } else if (condition === "rain") {
       icons.set(day, w[5]);
-    } else if (condition == "sleet") {
+    } else if (condition === "sleet") {
       icons.set(day, w[6]);
-    } else if (condition == "snow") {
+    } else if (condition === "snow") {
       icons.set(day, w[7]);
-    } else if (condition == "wind") {
+    } else if (condition === "wind") {
       icons.set(day, w[8]);
     } else {}
   }
+
+  // Display all the weather icon information
+  var display = new Skycons({"color": "orange"});
+
+  display.set("clear-day", Skycons.CLEAR_DAY);
+  display.set("clear-night", Skycons.CLEAR_NIGHT);
+  display.set("partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
+  display.set("partly-cloudy-night", Skycons.PARTLY_CLOUDY_NIGHT);
+  display.set("cloudy", Skycons.CLOUDY);
+  display.set("rain", Skycons.RAIN);
+  display.set("sleet", Skycons.SLEET);
+  display.set("snow", Skycons.SNOW);
+  display.set("wind", Skycons.WIND);
+  display.set("fog", Skycons.FOG);
+  
+  display.play();
 
   // Set the latitude and longtitude into weather api
   if (navigator.geolocation) {
