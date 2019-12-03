@@ -1,4 +1,4 @@
-/* Botton Section */
+/* Button Section */
 .inactiveMixin {
   content: "";
   position: absolute;
@@ -95,37 +95,42 @@ background: rgb(247, 247, 247); */
   left: 24px;
 }
 
+/* End of Button Section */
+
+
+/* Testing */
 .row {
   border: 1px solid black;
 
 }
 
+/* Font Size for button naming */
 .title {
   font-family: 'Merienda One', cursive;
   text-align: left;
 }
 
+/* Display for 2 column layout */
 .col {
   display: flex;
   margin: auto;
 
 }
 
+/* change the google map size */
 .map {
   width: 100%;
   height: 400px;
 }
 
-/* .right{
-  height: 80vh;
-} */
+
 
 /* change the image in carousel */
 .imgc {
   height: 300px;
 }
 
-/* Change the carousel size */
+/* Change the carousel size [Currently not in used] */
 .carousel {
   width: 300px;
   /* height:360px; */
@@ -139,8 +144,8 @@ height: 150px;
 } */
 
 
+/* Font size for the weather  */
 @import url('https://fonts.googleapis.com/css?family=Dosis');
-
 
 .city {
 padding: 20px 0 10px 0;

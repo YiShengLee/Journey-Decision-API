@@ -4,6 +4,7 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
+      // set the default map display
       lat: 1.3521,
       lng: 103.8198
     },
@@ -17,15 +18,17 @@ $(document).ready(function () {
     // testing if the preventDefault working
     // console.log("form...");
     var location = $("#location").val();
+    
 
 
-    // var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
     $.ajax({
       url: url,
       success: function (result) {
         // console.log(result["results"][0]["geometry"]["location"]);
         // console.log(google.maps.GeocoderStatus);
         // var newmap = result["results"][0]["geometry"]["location"];
+        
 
         if (google.maps.GeocoderStatus.OK == "OK") {
           var newmap = result["results"][0]["geometry"]["location"];
@@ -79,13 +82,6 @@ $.getJSON('https://ipapi.co/json/', function (ipaddress) {
 
 
 // Weather API
-
-
-
-
-
-
-
 $(document).ready(function () {
 
 
@@ -128,6 +124,7 @@ $(document).ready(function () {
     } else {}
   }
 
+  // Set the latitude and longtitude into weather api
   if (navigator.geolocation) {
 
     navigator.geolocation.getCurrentPosition(function (location) {
@@ -137,11 +134,12 @@ $(document).ready(function () {
 
       var geolocation = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
 
-
+      // Display loading image
       setTimeout(function () {
         $('div').removeClass('loader');
       }, 1500);
-
+      
+      // Dark sky API key
       var url = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + latitude + "," + longitude + "?callback=?&units=si";
 
       $.getJSON(url, function (data) {
@@ -194,7 +192,7 @@ $(document).ready(function () {
           var todayMaxTemp = data.daily.data[0].temperatureMax.toFixed(0);
           var todayMinTemp = data.daily.data[0].temperatureMin.toFixed(0);
           var todayIcon = data.daily.data[0].icon;
-          $("#todayC").html("<br>" + todayMinTemp + "&deg;/" + todayMaxTemp + "&deg; <br> <i class=\"" + todayIcon + "\" id=\"smallIcon\">");
+          $("#todayC").html("<br>" + todayMinTemp + "&deg;/" + todayMaxTemp + "&deg;");
           //today forecast in F 
           var todayMaxTemp = (data.daily.data[0].temperatureMax * 9 / 5 + 32).toFixed(0);
           var todayMinTemp = (data.daily.data[0].temperatureMin * 9 / 5 + 32).toFixed(0);
@@ -217,7 +215,7 @@ $(document).ready(function () {
           var tomorrowMaxTemp = (data.daily.data[1].temperatureMax * 9 / 5 + 32).toFixed(0);
           var tomorrowMinTemp = (data.daily.data[1].temperatureMin * 9 / 5 + 32).toFixed(0);
           var tomorrowIcon = data.daily.data[1].icon;
-          $("#tomorrowF").html("<br>" + tomorrowMinTemp + "&deg;/" + tomorrowMaxTemp + "&deg; <br> <i class=\"" + tomorrowIcon + "\" id=\"smallIcon\">");
+          $("#tomorrowF").html("<br>" + tomorrowMinTemp + "&deg;/" + tomorrowMaxTemp + "&deg; <br>");
 
           // console.log(tomorrowIcon);
           getWeatherIcon(tomorrowIcon, w, "day2");
@@ -226,12 +224,12 @@ $(document).ready(function () {
           var afterTomorrowMaxTemp = data.daily.data[2].temperatureMax.toFixed(0);
           var afterTomorrowMinTemp = data.daily.data[2].temperatureMin.toFixed(0);
           var afterTomorrowIcon = data.daily.data[2].icon;
-          $("#afterTomorrowC").html("<br>" + afterTomorrowMinTemp + "&deg;/" + afterTomorrowMaxTemp + "&deg; <br> <i class=\"" + afterTomorrowIcon + "\" id=\"smallIcon\">");
+          $("#afterTomorrowC").html("<br>" + afterTomorrowMinTemp + "&deg;/" + afterTomorrowMaxTemp + "&deg; <br>");
           //after tomorrow forecast in F
           var afterTomorrowMaxTemp = (data.daily.data[2].temperatureMax * 9 / 5 + 32).toFixed(0);
           var afterTomorrowMinTemp = (data.daily.data[2].temperatureMin * 9 / 5 + 32).toFixed(0);
           var afterTomorrowIcon = data.daily.data[2].icon;
-          $("#afterTomorrowF").html("<br>" + afterTomorrowMinTemp + "&deg;/" + afterTomorrowMaxTemp + "&deg; <br> <i class=\"" + afterTomorrowIcon + "\" id=\"smallIcon\">");
+          $("#afterTomorrowF").html("<br>" + afterTomorrowMinTemp + "&deg;/" + afterTomorrowMaxTemp + "&deg; <br>");
 
           getWeatherIcon(afterTomorrowIcon, w, "day3");
 
@@ -239,12 +237,12 @@ $(document).ready(function () {
           var afterAfterTomorrowMaxTemp = data.daily.data[3].temperatureMax.toFixed(0);
           var afterAfterTomorrowMinTemp = data.daily.data[3].temperatureMin.toFixed(0);
           var afterAfterTomorrowIcon = data.daily.data[3].icon;
-          $("#afterAfterTomorrowC").html("<br>" + afterAfterTomorrowMinTemp + "&deg;/" + afterAfterTomorrowMaxTemp + "&deg; <br> <i class=\"" + afterAfterTomorrowIcon + "\" id=\"smallIcon\">");
+          $("#afterAfterTomorrowC").html("<br>" + afterAfterTomorrowMinTemp + "&deg;/" + afterAfterTomorrowMaxTemp + "&deg; <br>");
           //after after tomorrow forecast in F :))
           var afterAfterTomorrowMaxTemp = (data.daily.data[3].temperatureMax * 9 / 5 + 32).toFixed(0);
           var afterAfterTomorrowMinTemp = (data.daily.data[3].temperatureMin * 9 / 5 + 32).toFixed(0);
           var afterAfterTomorrowIcon = data.daily.data[3].icon;
-          $("#afterAfterTomorrowF").html("<br>" + afterAfterTomorrowMinTemp + "&deg;/" + afterAfterTomorrowMaxTemp + "&deg; <br> <i class=\"" + afterAfterTomorrowIcon + "\" id=\"smallIcon\">");
+          $("#afterAfterTomorrowF").html("<br>" + afterAfterTomorrowMinTemp + "&deg;/" + afterAfterTomorrowMaxTemp + "&deg; <br>");
 
           getWeatherIcon(afterAfterTomorrowIcon, w, "day4");
 

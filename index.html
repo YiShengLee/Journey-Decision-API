@@ -23,7 +23,7 @@
 <body>
 
     <!-- NavBar Section -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- <h1>Decision to Make</h1> -->
     <div class="header">
@@ -107,6 +107,14 @@
                 </div>
 
                 <div class="countrytxt">Country: <span id="country" class="country"></span></div> <br>
+                <img src="/Project 2/images/Flag_icons/${flag}.png">
+
+                <form id="frm">
+                    Address: <br>
+                    <input type="text" name="location" id="location" placeholder="Your Destination Address">
+
+                    <input type="submit" name="submit" id="submit" value="Search">
+                </form> <br> <br>
 
                 <div class="currSummarytxt">Your location Weather: <span id="currSummary" class="currSummary"></span>
                 </div> <br>
@@ -117,21 +125,14 @@
 
                 </figure> -->
 
+                <!-- Dark Sky Section [Weather Information] -->
 
-                <form id="frm">
-                    Address: <br>
-                    <input type="text" name="location" id="location" placeholder="Your Destination Address">
-
-                    <input type="submit" name="submit" id="submit" value="Search">
-                </form> <br> <br>
-
-                <span>Your current location Weather!</span>
                 <div class="city ">
 
                     <div class="container">
 
                         <div class="city-title ">
-                            <span id="location"> </span>
+                            <span id="location"></span>
                         </div>
                         <hr />
                         <div class="city-weather-temperature loader">
@@ -144,6 +145,7 @@
                             <span id="description"></span> <br>
 
                         </div>
+                        <!-- Current Weather forcast -->
                         <figure class="icons">
                             <canvas id="day0" class="weathericon" width="125" height="125"></canvas>
                         </figure>
@@ -155,6 +157,7 @@
                                         <li>
                                             <span id="todayC"> </span>
                                             <span id="todayF"> </span>
+                                            <!-- One Day Later Weather forcast -->
                                             <figure class="icons">
                                                 <canvas id="day1" class="todayIcon" width="40" height="40"></canvas>
                                             </figure>
@@ -162,6 +165,7 @@
                                         <li>
                                             <span id="tomorrowC"> </span>
                                             <span id="tomorrowF"> </span>
+                                            <!-- Two Day Later Weather forcast -->
                                             <figure class="icons">
                                                 <canvas id="day2" class="tomorrowIcon" width="40" height="40"></canvas>
                                             </figure>
@@ -169,6 +173,7 @@
                                         <li>
                                             <span id="afterTomorrowC"> </span>
                                             <span id="afterTomorrowF"> </span>
+                                            <!-- Three Day Later Weather forcast -->
                                             <figure class="icons">
                                                 <canvas id="day3" class="tomorrowIcon" width="40" height="40"></canvas>
                                             </figure>
@@ -176,6 +181,7 @@
                                         <li>
                                             <span id="afterAfterTomorrowC"> </span>
                                             <span id="afterAfterTomorrowF"> </span>
+                                            <!-- Four Day Later Weather forcast -->
                                             <figure class="icons">
                                                 <canvas id="day4" class="tomorrowIcon" width="40" height="40"></canvas>
                                             </figure>
@@ -192,60 +198,6 @@
 
                     </div>
                 </div>
-
-
-                <!-- DarkSkyi Section -->
-                <!-- <div class="city ">
-
-                        <div class="card container">
-                      
-                          <div class="city-title ">
-                            <span id="location"> </span>
-                          </div>
-                          <hr />
-                          <div class="city-weather-temperature loader">
-                            <span class="celsius fahrenheit-btn "></span>
-                            <span class="fahrenheit celsius-btn"></span>
-                          </div>
-                      
-                          <div class="city-weather-description">
-                            <span id="icon"></span><br>
-                            <span id="description"></span>
-                          </div>
-                      
-                          <div class="bottom">
-                            <div class="nav-info clearfix">
-                              <div class="add-info">
-                                <ul id="details">
-                                  <li>
-                                   <span id="todayC"> </span>
-                                    <span id="todayF"> </span>
-                                  </li>
-                                  <li>
-                                    <span id="tomorrowC"> </span>
-                                    <span id="tomorrowF"> </span>
-                                  </li>
-                                  <li>
-                                    <span id="afterTomorrowC"> </span>
-                                    <span id="afterTomorrowF"> </span>
-                                  </li>
-                                  <li>
-                                    <span id="afterAfterTomorrowC"> </span>
-                                    <span id="afterAfterTomorrowF"> </span>
-                                  </li>
-                                  
-                                </ul>
-                                  
-                              </div>  
-                              <div><span class="date"> </span> <a href="http://forecast.io" id="forio">Powered by Dark Sky</a></div>
-                            </div> 
-                      
-                          </div> 
-                      
-                        </div>
-                      </div> -->
-
-
 
 
                 <!-- Carousel Section -->
@@ -309,6 +261,20 @@
         <canvas id="wind" width="64" height="64"></canvas>
         <canvas id="fog" width="64" height="64"></canvas>
     </figure> -->
+
+    <span>Test</span>
+    <figure class="icons">
+        <canvas id="clear-day" width="64" height="64"></canvas>
+        <canvas id="clear-night" width="64" height="64"></canvas>
+        <canvas id="partly-cloudy-day" width="64" height="64"></canvas>
+        <canvas id="partly-cloudy-night" width="64" height="64"></canvas>
+        <canvas id="cloudy" width="64" height="64"></canvas>
+        <canvas id="rain" width="64" height="64"></canvas>
+        <canvas id="sleet" width="64" height="64"></canvas>
+        <canvas id="snow" width="64" height="64"></canvas>
+        <canvas id="wind" width="64" height="64"></canvas>
+        <canvas id="fog" width="64" height="64"></canvas>
+    </figure>
 
 
 
