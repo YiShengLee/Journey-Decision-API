@@ -407,7 +407,7 @@ height: 15px; */
   src: url('/Project\ 2/fonts/BeautyMountains.ttf');
 }  
 
-/* Set the weather Legend */
+/* --Set the weather Legend Section--*/
 .box{
   display: inline-block;
   /* border: 1px solid black; */
@@ -418,7 +418,51 @@ height: 15px; */
   text-align: center;
 }
 
+
 .weathertxt{
   font-family: 'Patrick Hand', cursive;
   font-size: 20px;
 }
+
+/* --Weather Legend end Section-- */
+
+
+/* --Bottom Section of the webpage-- */
+/*hover color for facebook icon*/
+.facebook:hover{
+  color: #3b5998;
+}
+
+
+/*hover color for linkedin icon*/
+.linkedin:hover{
+  color: #0e76a8;
+}
+
+
+/*hover color for youtube icon*/
+.youtube:hover{
+  color: #c4302b;
+}
+
+
+.end_message{
+  background-color:rgb(52 58 64);
+  padding: 5px;
+}
+
+
+.endtext{
+  color: white;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  font-size: 15px;
+}
+
+.copyright{
+  font-size: 30px;
+  color: rgb(184, 83, 22);
+}
+
+/* --Bottom Section of the webpage end-- */
