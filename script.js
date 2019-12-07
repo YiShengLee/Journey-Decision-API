@@ -21,7 +21,7 @@ $(document).ready(function () {
     
 
 
-    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
+    // var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
     $.ajax({
       url: url,
       success: function (result) {
@@ -70,11 +70,16 @@ var longtitudeCurrent;
 
 // Ipappi Section 
 $.getJSON('https://ipapi.co/json/', function (ipaddress) {
-  // console.log(data);
+  // console.log(ipaddress);
   var country = ipaddress.city;
+  // Display flag image
+  var flag = "/Project 2/images/Flag_icons/" + ipaddress.city + ".png";
+  // var flag = "/Project 2/images/Flag_icons/" + "malaysia.png";
   latitudeCurrent = ipaddress.latitude;
   longtitudeCurrent = ipaddress.longitude;
   $("#country").html(country)
+  document.getElementById("flag").src = flag;
+  // console.log(flag);
   // weather()
   // console.log("lat" + latitudeCurrent);
   // console.log("long" + longtitudeCurrent);
@@ -341,3 +346,4 @@ $("#toggle1").click(function () {
 // $("#toggle2").click(function () {
 //   $("#weathericon").toggle();
 // });
+

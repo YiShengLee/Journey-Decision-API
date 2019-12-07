@@ -466,3 +466,13 @@ height: 15px; */
 }
 
 /* --Bottom Section of the webpage end-- */
+
+.flag{
+  height: 80px;
+  padding: 2px;
+  
+}
+
+.flaglayout{
+  text-align: center;
+}
