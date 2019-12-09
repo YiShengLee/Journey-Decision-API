@@ -12,6 +12,10 @@ function initMap() {
   });
 }
 
+var newmap;
+var searchlat;
+var searchlong;
+
 $(document).ready(function () {
   $("#frm").submit(function (e) {
     e.preventDefault();
@@ -19,19 +23,24 @@ $(document).ready(function () {
     // console.log("form...");
     var location = $("#location").val();
     
+    
+    
 
 
-    // var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
     $.ajax({
       url: url,
       success: function (result) {
         // console.log(result["results"][0]["geometry"]["location"]);
         // console.log(google.maps.GeocoderStatus);
-        // var newmap = result["results"][0]["geometry"]["location"];
         
 
         if (google.maps.GeocoderStatus.OK == "OK") {
           var newmap = result["results"][0]["geometry"]["location"];
+          var searchlat = result["results"][0]["geometry"]["location"]["lat"];
+          var searchlong = result["results"][0]["geometry"]["location"]["lng"];
+          
+          
           var marker = new google.maps.Marker({
             position: newmap,
             map: map
@@ -55,16 +64,8 @@ $(document).ready(function () {
 
 });
 
-// $.ajax({
-//   type: "GET",
-//   datatype: "json",
-//   url:"https://ipapi.co/8.8.8.8/json/",
 
-//   success: function (data) {
-//     console.log(data);
-//   }
 
-// });
 var latitudeCurrent;
 var longtitudeCurrent;
 
@@ -153,6 +154,7 @@ $(document).ready(function () {
       latitude = location.coords.latitude;
       longitude = location.coords.longitude;
       // console.log(latitude + " " + longitude);
+      // console.log(location);
 
       var geolocation = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
 
@@ -163,6 +165,8 @@ $(document).ready(function () {
       
       // Dark sky API key
       var url = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + latitude + "," + longitude + "?callback=?&units=si";
+      var newurl = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + searchlat + "," + searchlong + "?callback=?&units=si";
+      
 
       $.getJSON(url, function (data) {
         // console.log(data);
@@ -183,27 +187,13 @@ $(document).ready(function () {
 
         // Change the icon image
         // $(".weathericon").attr("id", weathericon);
-        console.log(data);
-        console.log("Current Weather", weathericon);
-
-
-        // icons.set("clear-day", Skycons.CLEAR_DAY);
-        // icons.set("clear-night", Skycons.CLEAR_NIGHT);
-        // icons.set("partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
-        // icons.set("partly-cloudy-night", Skycons.PARTLY_CLOUDY_NIGHT);
-        // icons.set("cloudy", Skycons.CLOUDY);
-        // icons.set("rain", Skycons.RAIN);
-        // icons.set("sleet", Skycons.SLEET);
-        // icons.set("snow", Skycons.SNOW);
-        // icons.set("wind", Skycons.WIND);
-        // icons.set("fog", Skycons.FOG);
-
+        // console.log("Current Weather", weathericon);
 
         icons.play();
 
         //bloody timeout so you can see the loading bars
         setTimeout(function () {
-          $("#icon").html("<i class=\"" + icon + "\">");
+          // $("#icon").html("<i class=\"" + icon + "\">");
           $("#description").html(description);
           $("#humidity").html(humidity);
           $("#wind").html(wind);
@@ -301,11 +291,11 @@ $(document).ready(function () {
 
     });
   } else {
-    alert("We couldn` retrieve your location, please check your location settings");
+    alert("We couldn't retrieve your location, please check your location settings");
   };
 
 
-  //date //
+  // date array 
   var months = new Array(12);
   months[0] = "January";
   months[1] = "February";
