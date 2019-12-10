@@ -424,6 +424,12 @@ height: 15px; */
   font-size: 20px;
 }
 
+.left{
+  background: url(/Project\ 2/images/cloud_background.png);
+  background-repeat: repeat;
+}
+
+
 /* --Weather Legend end Section-- */
 
 
@@ -475,4 +481,11 @@ height: 15px; */
 
 .flaglayout{
   text-align: center;
+}
+
+
+
+.right{
+  background: url(/Project\ 2/images/cloud_background.png);
+  background-repeat: repeat;
 }

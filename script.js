@@ -71,7 +71,7 @@ var longtitudeCurrent;
 
 // Ipappi Section 
 $.getJSON('https://ipapi.co/json/', function (ipaddress) {
-  console.log(ipaddress);
+  // console.log(ipaddress);
   var country = ipaddress.country_name;
   // Display flag image
   var flag = "/Project 2/images/Flag_icons/" + country + ".png";
