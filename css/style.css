@@ -47,7 +47,7 @@ background: rgb(247, 247, 247); */
   -webkit-tap-highlight-color: transparent;
   height: 30px;
   width: 50px;
-  border: 1px solid #e4e4e4;
+  border: 1px solid gray;
   border-radius: 60px;
 }
 
@@ -200,7 +200,8 @@ font-size: 2em;
 .city-weather-description {
 font-size: 1.2em;
 width: 200px;
-margin: auto;
+padding-top: 5px;
+padding-bottom: 10px;
 text-align: center;
 }
 
@@ -375,9 +376,9 @@ justify-content: center;
 height: 15px; */
 }
 
-.decision{
+/* .decision{
   height: 100px;
-}
+} */
 
 .header{
   background: url(/Project\ 2/images/Worldmap.jpg);
@@ -424,12 +425,6 @@ height: 15px; */
   font-size: 20px;
 }
 
-.left{
-  background: url(/Project\ 2/images/cloud_background.png);
-  background-repeat: repeat;
-}
-
-
 /* --Weather Legend end Section-- */
 
 
@@ -473,19 +468,15 @@ height: 15px; */
 
 /* --Bottom Section of the webpage end-- */
 
+/* Edit flag layout */
 .flag{
-  height: 80px;
-  padding: 2px;
-  
+  height: 30px;  
 }
 
-.flaglayout{
-  text-align: center;
-}
-
-
-
-.right{
+/* Background Image */
+/* .middle{
   background: url(/Project\ 2/images/cloud_background.png);
   background-repeat: repeat;
-}
+} */
+
+
