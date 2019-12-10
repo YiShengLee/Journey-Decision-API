@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/Project 2/images/favicon.ico" type="image/x-icon">
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Merienda+One|Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One|Patrick+Hand|Permanent+Marker&display=swap" rel="stylesheet">
 
 
 </head>
@@ -152,69 +152,77 @@
 
 
                     <!-- Display Weather legend -->
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="clear-day" width="40" height="40"></canvas>
+                    <div class="legend">
+                        <p class="legendtxt">Legend</p>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="clear-day" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Clear Day</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="clear-night" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="clear-night" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Clear Night</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="partly-cloudy-day" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="partly-cloudy-day" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Partly Cloudy Day</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="partly-cloudy-night" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="partly-cloudy-night" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Partly Cloudy Night</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="cloudy" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="cloudy" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Cloudy</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="rain" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="rain" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Rain</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="sleet" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="sleet" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Sleet</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="snow" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="snow" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Snow</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="wind" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="wind" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Wind</p>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-5 box">
-                        <figure class="display">
-                            <canvas id="fog" width="40" height="40"></canvas>
+                        </div>
+                        <div class="col-lg-2 col-md-5 box">
+                            <figure class="display">
+                                <canvas id="fog" width="25" height="25"></canvas>
+                            </figure>
                             <p class="weathertxt">Fog</p>
-                        </figure>
+                        </div>
+
                     </div>
+
+
 
                 </div>
 
+
+                <!-- Button layout Section -->
                 <div class="row">
                     <div class="col">
                         <span class="title">Map:</span>
@@ -242,8 +250,9 @@
                     </div>
                 </div>
 
-                <div class="countrytxt">Country: <span id="country" class="country"></span></div>
+                <!-- <div class="countrytxt">Country: <span id="country" class="country"></span></div> -->
 
+                <!-- Search location for google map -->
                 <form id="frm">
                     Address: <br>
                     <input type="text" name="location" id="location" placeholder="Your Destination Address">
@@ -261,18 +270,21 @@
         </div>
     </div>
 
-      <!--Copyrights Section	-->
-      <div class="row end_message">  
-            <div class="col-3 end_message_icon">
-              <a href="https://www.facebook.com/lee.yisheng.9 " target="_blank"><i class="copyright facebook fab fa-facebook-square"></i></a>
-              <a href="https://www.linkedin.com/in/yi-sheng-lee-6a052b14/" target="_blank"><i class="copyright linkedin fab fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCTBkZEaXCy1u_Dk0xVwmwDA" target="_blank"><i class="copyright youtube fab fa-youtube-square"></i></a>
-            </div>
-            
-            <div class="col-6 endtext">
-              © 2019 Yi Sheng Lee. All Rights Reserved.
-            </div>  
-          </div>
+    <!--Copyrights Section	-->
+    <div class="row end_message">
+        <div class="col-3 end_message_icon">
+            <a href="https://www.facebook.com/lee.yisheng.9 " target="_blank"><i
+                    class="copyright facebook fab fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/in/yi-sheng-lee-6a052b14/" target="_blank"><i
+                    class="copyright linkedin fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCTBkZEaXCy1u_Dk0xVwmwDA" target="_blank"><i
+                    class="copyright youtube fab fa-youtube-square"></i></a>
+        </div>
+
+        <div class="col-6 endtext">
+            © 2019 Yi Sheng Lee. All Rights Reserved.
+        </div>
+    </div>
 
 
     <!-- Type of Weather icon
