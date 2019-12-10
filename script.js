@@ -22,9 +22,9 @@ $(document).ready(function () {
     // testing if the preventDefault working
     // console.log("form...");
     var location = $("#location").val();
-    
-    
-    
+
+
+
 
 
     var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
@@ -33,14 +33,14 @@ $(document).ready(function () {
       success: function (result) {
         // console.log(result["results"][0]["geometry"]["location"]);
         // console.log(google.maps.GeocoderStatus);
-        
+
 
         if (google.maps.GeocoderStatus.OK == "OK") {
           var newmap = result["results"][0]["geometry"]["location"];
-          var searchlat = result["results"][0]["geometry"]["location"]["lat"];
-          var searchlong = result["results"][0]["geometry"]["location"]["lng"];
-          
-          
+          searchlat = result["results"][0]["geometry"]["location"]["lat"];
+          searchlong = result["results"][0]["geometry"]["location"]["lng"];
+          // var newurl = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + searchlat + "," + searchlong + "?callback=?&units=si";
+
           var marker = new google.maps.Marker({
             position: newmap,
             map: map
@@ -71,10 +71,10 @@ var longtitudeCurrent;
 
 // Ipappi Section 
 $.getJSON('https://ipapi.co/json/', function (ipaddress) {
-  // console.log(ipaddress);
-  var country = ipaddress.city;
+  console.log(ipaddress);
+  var country = ipaddress.country_name;
   // Display flag image
-  var flag = "/Project 2/images/Flag_icons/" + ipaddress.city + ".png";
+  var flag = "/Project 2/images/Flag_icons/" + country + ".png";
   // var flag = "/Project 2/images/Flag_icons/" + "malaysia.png";
   latitudeCurrent = ipaddress.latitude;
   longtitudeCurrent = ipaddress.longitude;
@@ -132,7 +132,9 @@ $(document).ready(function () {
   }
 
   // Display all the weather icon information
-  var display = new Skycons({"color": "black"});
+  var display = new Skycons({
+    "color": "black"
+  });
 
   display.set("clear-day", Skycons.CLEAR_DAY);
   display.set("clear-night", Skycons.CLEAR_NIGHT);
@@ -144,7 +146,7 @@ $(document).ready(function () {
   display.set("snow", Skycons.SNOW);
   display.set("wind", Skycons.WIND);
   display.set("fog", Skycons.FOG);
-  
+
   display.play();
 
   // Set the latitude and longtitude into weather api
@@ -162,11 +164,10 @@ $(document).ready(function () {
       setTimeout(function () {
         $('div').removeClass('loader');
       }, 1500);
-      
+
       // Dark sky API key
       var url = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + latitude + "," + longitude + "?callback=?&units=si";
-      var newurl = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + searchlat + "," + searchlong + "?callback=?&units=si";
-      
+
 
       $.getJSON(url, function (data) {
         // console.log(data);
@@ -181,8 +182,6 @@ $(document).ready(function () {
         var summary = data["currently"]["summary"];
         // console.log(summary); // Check if the Weather API Work
         var weathericon = data["currently"]["icon"]
-        // $("#currSummary").html(summary);
-        // $("#day0").html(weathericon);
         getWeatherIcon(weathericon, w, "day0");
 
         // Change the icon image
@@ -336,4 +335,3 @@ $("#toggle1").click(function () {
 // $("#toggle2").click(function () {
 //   $("#weathericon").toggle();
 // });
-
