@@ -99,34 +99,27 @@ background: rgb(247, 247, 247); */
 
 
 /* Testing */
-.row {
+/* .row {
   border: 1px solid black;
-
-}
+} */
 
 /* Font Size for button naming */
 .title {
   font-family: 'Merienda One', cursive;
-  text-align: left;
 }
 
 /* Display for 2 column layout */
-.col {
-  display: flex;
-  justify-content: center;
-  /* margin: auto; */
+.tt{
+  text-align: right;
+  margin: auto;
 }
 
-/* .butfeature {
-  display: inline-block;
-} */
 
 /* change the google map size */
 .map {
   width: 100%;
   height: 400px;
 }
-
 
 
 /* change the image in carousel */
@@ -139,13 +132,6 @@ background: rgb(247, 247, 247); */
   width: 300px;
   /* height:360px; */
 }
-
-/* Weather icon format */
-/* figure {
-margin: 5em auto;
-width: 350px;
-height: 150px;
-} */
 
 
 /* Font size for the weather  */
@@ -392,9 +378,6 @@ ul {
 height: 15px; */
 }
 
-/* .decision{
-  height: 100px;
-} */
 
 .header {
   background: url(/Project\ 2/images/Worldmap.jpg);
@@ -526,10 +509,14 @@ height: 15px; */
   width: 200px;
 }
 
+.fold{
+  height: 30px;
+}
+
 
 
 /* Change the setting when screen is smaller than 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 540px) {
   .word {
     font-size: 40px;
   }
@@ -538,3 +525,10 @@ height: 15px; */
     width: 40%;
   }
 }
+
+@media screen and (max-width:768px){
+  .left{
+    padding: 0px;
+  }
+}
+

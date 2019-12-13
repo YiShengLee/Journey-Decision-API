@@ -217,56 +217,44 @@
                             </figure>
                             <p class="weathertxt">Fog</p>
                         </div>
-
                     </div>
-
-
-
                 </div>
 
-
                 <!-- <div class="countrytxt">Country: <span id="country" class="country"></span></div> -->
-
-                <!-- Search location for google map -->
-
-
             </div>
             <div class="right col-md-8 col-sm-12">
                 <!-- Second columns -->
                 <!-- Button layout Section -->
-                <div class="row butfeature">
-                    <div class="col">
+                <br>
+                <div class="row">
+                    <div class="col-6 col-md-3 tt">
                         <span class="title">Map:</span>
                     </div>
                     <!-- Map Button -->
-                    <div class="col">
+                    <div class="col-6 col-md-3">
                         <div class="toggleWrapper">
                             <!-- button for map section -->
                             <input type="checkbox" name="toggle" class="mobileToggle" id="toggle1" checked>
                             <label for="toggle1"></label>
                         </div>
                     </div>
-                </div>
-
-                <div class="row butfeature">
-                    <div class="col">
+                    <div class="col-6 col-md-3 tt">
                         <span class="title">Weather:</span>
                     </div>
                     <!-- Weather Button -->
-                    <div class="col">
+                    <div class="col-6 col-md-3">
                         <div class="toggleWrapper">
                             <input type="checkbox" name="toggle" class="mobileToggle" id="toggle2" checked>
                             <label for="toggle2"></label>
                         </div>
                     </div>
                 </div>
-
-
+                <!-- Search location for google map -->
                 <form id="frm">
-                    Address: <br>
-                    <input type="search" name="location" id="location" placeholder="Your Destination Address">
+                    <!-- <img class="fold" src="/Project 2/images/mapfolding.gif"> -->
+                    <br><input type="search" name="location" id="location" placeholder="Your Destination Address">
 
-                    <input type="submit" name="submit" id="submit" value="Search">
+                    <input type="submit" name="submit" id="submit" class="btn btn-primary submit" value="Search">
                 </form>
                 <div id="map" class="map"></div>
                 <div class="next">Next Data</div>
