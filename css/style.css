@@ -513,9 +513,17 @@ height: 15px; */
   height: 30px;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
 
 
-/* Change the setting when screen is smaller than 600px */
+/* Change the setting when screen is smaller than 540px */
 @media screen and (max-width: 540px) {
   .word {
     font-size: 40px;

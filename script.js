@@ -371,6 +371,6 @@ $("#toggle1").click(function () {
   $("#map").toggle();
 });
 
-// $("#toggle2").click(function () {
-//   $("#weathericon").toggle();
-// });
+$("#toggle2").click(function () {
+  $("#table").toggle();
+});
