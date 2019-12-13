@@ -15,7 +15,8 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/Project 2/images/favicon.ico" type="image/x-icon">
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Merienda+One|Patrick+Hand|Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One|Patrick+Hand|Permanent+Marker&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -76,15 +77,17 @@
 
     <div class="container-fluid">
         <div class="row middle">
-            <div class="left col-4">
-                <!-- Dark Sky Section [Weather Information] -->
+            <div class="left col-md-4 col-sm-12">
 
+                <!-- Dark Sky Section [Weather Information] -->
                 <div class="city ">
 
                     <div class="container">
 
                         <div class="city-title ">
+                            <!-- inset country flag image section -->
                             <img id="flag" class="flag" src="">
+                            <!-- Insert country name section -->
                             <span id="country"></span>
                         </div>
                         <hr />
@@ -222,8 +225,16 @@
                 </div>
 
 
+                <!-- <div class="countrytxt">Country: <span id="country" class="country"></span></div> -->
+
+                <!-- Search location for google map -->
+
+
+            </div>
+            <div class="right col-md-8 col-sm-12">
+                <!-- Second columns -->
                 <!-- Button layout Section -->
-                <div class="row">
+                <div class="row butfeature">
                     <div class="col">
                         <span class="title">Map:</span>
                     </div>
@@ -237,7 +248,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row butfeature">
                     <div class="col">
                         <span class="title">Weather:</span>
                     </div>
@@ -250,27 +261,22 @@
                     </div>
                 </div>
 
-                <!-- <div class="countrytxt">Country: <span id="country" class="country"></span></div> -->
 
-                <!-- Search location for google map -->
                 <form id="frm">
                     Address: <br>
-                    <input type="text" name="location" id="location" placeholder="Your Destination Address">
+                    <input type="search" name="location" id="location" placeholder="Your Destination Address">
 
                     <input type="submit" name="submit" id="submit" value="Search">
-                </form> <br> <br>
-
-            </div>
-            <div class="right col-8">
-                <!-- Second columns -->
+                </form>
                 <div id="map" class="map"></div>
-                <div>Next Data</div>
+                <div class="next">Next Data</div>
             </div>
 
         </div>
     </div>
 
     <!--Copyrights Section	-->
+
     <div class="row end_message">
         <div class="col-3 end_message_icon">
             <a href="https://www.facebook.com/lee.yisheng.9 " target="_blank"><i

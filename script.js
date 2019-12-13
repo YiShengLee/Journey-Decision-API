@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 
 
-    // var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=+" + location + ",+SG&key=AIzaSyCHWMwcTeozXv6qrb4iD6l5JRZZ9HFeSa4";
     $.ajax({
       url: url,
       success: function (result) {
@@ -39,7 +39,46 @@ $(document).ready(function () {
           var newmap = result["results"][0]["geometry"]["location"];
           searchlat = result["results"][0]["geometry"]["location"]["lat"];
           searchlong = result["results"][0]["geometry"]["location"]["lng"];
-          // var newurl = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + searchlat + "," + searchlong + "?callback=?&units=si";
+          var newurl = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + searchlat + "," + searchlong + "?callback=?&units=si";
+          console.log(newurl);
+
+          $.getJSON(newurl, function (data) {
+            console.log(data);
+            var summary = data["currently"]["summary"];
+
+            // map.addListener('bounds_changed', function() {
+            //   searchBox.setBounds(map.getBounds());
+            // });
+            
+            function convertTimestamp(timestamp) {
+              var d = new Date(timestamp * 1000),	// Convert to milliseconds
+                yyyy = d.getFullYear(),
+                mm = ('0' + (d.getMonth() + 1)).slice(-2),	// Months are zero based. Add leading 0.
+                dd = ('0' + d.getDate()).slice(-2),			// Add leading 0.
+                hh = d.getHours(),
+                h = hh,
+                min = ('0' + d.getMinutes()).slice(-2),		// Add leading 0.
+                ampm = 'AM',
+                time;
+                  
+              if (hh >= 12) {
+                h = hh - 12;
+                ampm = 'PM';
+              } else if (hh == 0) {
+                h = 12;
+              }
+              
+              // ie: 2013-02-18, 8:35 AM	
+              time = dd + '-' + mm + '-' + yyyy + ', ' + h + ':' + min + ' ' + ampm;
+                
+              return time;
+            }
+            
+            var unixNow = convertTimestamp((new Date()) / 1000);
+            console.log(unixNow);
+            // document.write(convertTimestamp(unixNow));
+
+          });
 
           var marker = new google.maps.Marker({
             position: newmap,

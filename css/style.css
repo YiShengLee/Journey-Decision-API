@@ -113,9 +113,13 @@ background: rgb(247, 247, 247); */
 /* Display for 2 column layout */
 .col {
   display: flex;
-  margin: auto;
-
+  justify-content: center;
+  /* margin: auto; */
 }
+
+/* .butfeature {
+  display: inline-block;
+} */
 
 /* change the google map size */
 .map {
@@ -404,7 +408,7 @@ height: 15px; */
   color: rgb(112, 81, 52);
   text-align: center;
   font-family: "BeautyMountains";
-  padding-right: 50px;
+  /* padding-right: 50px; */
   /* opacity: 0.8; */
   text-shadow:
     -1px -1px 0 #000,
@@ -498,6 +502,7 @@ height: 15px; */
   font-size: 15px;
 }
 
+
 .copyright {
   font-size: 30px;
   color: rgb(184, 83, 22);
@@ -511,8 +516,25 @@ height: 15px; */
 }
 
 /* Background Image */
-.middle{
+.middle {
   /* background: url(/Project\ 2/images/cloud_background.png);
   background-repeat: repeat; */
   background: #e5f4fe;
+}
+
+#location {
+  width: 200px;
+}
+
+
+
+/* Change the setting when screen is smaller than 600px */
+@media screen and (max-width: 600px) {
+  .word {
+    font-size: 40px;
+  }
+
+  .box {
+    width: 40%;
+  }
 }
