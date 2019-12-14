@@ -520,6 +520,11 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
+#table{
+  width: 100%;
+}
+
 th, td {
   padding: 5px;
   text-align: center;
@@ -527,6 +532,12 @@ th, td {
 
 .tableHeader{
   font-size: 50px;
+  font-weight: bold;
+  font-family: "Humble";
+}
+
+.tableHeader1{
+  font-size: 30px;
   font-weight: bold;
   font-family: "Humble";
 }
@@ -540,6 +551,16 @@ th, td {
 
   .box {
     width: 40%;
+  }
+  .tableHeader{
+    font-size: 30px;
+  }
+  .tableHeader1{
+    font-size: 10px;
+  }
+  .currtime,.onehrtime,.twohrtime,.threehrtime,.labelcol{
+    font-size: 10px;
+    font-weight: bold;
   }
 }
 

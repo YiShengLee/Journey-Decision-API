@@ -42,7 +42,7 @@ $(document).ready(function () {
           searchlat = result["results"][0]["geometry"]["location"]["lat"];
           searchlong = result["results"][0]["geometry"]["location"]["lng"];
           var newurl = "https://api.darksky.net/forecast/795c3669281b12e43538aa2100be89fb/" + searchlat + "," + searchlong + "?callback=?&units=si";
-          console.log(newurl);
+          // console.log(newurl);
 
           $.getJSON(newurl, function (data) {
             console.log(data);
@@ -52,15 +52,48 @@ $(document).ready(function () {
             //   searchBox.setBounds(map.getBounds());
             // });
 
-            // Date Javascript
+            // Date Row on the Table Javascript
             var curr = data['currently']['time'];
-            
-            let date = dayjs.unix(curr).format("dddd, D MMMM YYYY");
-            let time = dayjs.unix(curr).format("HH:mm:ss");
 
-            console.log(date);
-            console.log(time);
+            let date = " " + "[" + dayjs.unix(curr).format("D MMMM YYYY, dddd") + "]";
+            $('#tableHeader1').html(date);
+
+            // Time Row on the Table Javascript
+            // Current Time
+            let currtime = "Current Time" + "<br>" + dayjs.unix(curr).format("hh:mm:ss a");
+            $('#currtime').html(currtime);
+
+            // One Hour Later
+            var onehr = dayjs.unix(curr).add('1','hour');
+            var onehrs = onehr.format("hh:mm:ss a");
+
+            let onehrtime = "One Hour Later" + "<br>" + onehrs;
+            $('#onehrtime').html(onehrtime);
+
+            // console.log(onehrs);
+
+            // Two Hours Later
+            var twohr = dayjs.unix(curr).add('2','hour');
+            var twohrs = twohr.format("hh:mm:ss a");
+
+            let twohrtime = "Two Hour Later" + "<br>" + twohrs;
+            $('#twohrtime').html(twohrtime);
             
+            // console.log(twohrs);
+            
+            // Three Hours Later
+            var threehr = dayjs.unix(curr).add('3','hour');
+            var threehrs = threehr.format("hh:mm:ss a");
+
+            let threehrtime = "Three Hour Later" + "<br>" + threehrs;
+            $('#threehrtime').html(threehrtime);
+            
+            // console.log(threehrs);
+            
+            // // Temperature Row on the Table Javascript
+            // // Current Time
+            // var currtemp = data['currently']['temperature'] + "&deg;C";
+            // $('#currtemp').html(currtemp);
 
 
           });
@@ -359,4 +392,5 @@ $("#toggle1").click(function () {
 $("#toggle2").click(function () {
   $("#table").toggle();
   $("#tableHeader").toggle();
+  $("#tableHeader1").toggle();
 });
