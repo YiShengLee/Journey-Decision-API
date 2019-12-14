@@ -90,10 +90,22 @@ $(document).ready(function () {
             
             // console.log(threehrs);
             
-            // // Temperature Row on the Table Javascript
-            // // Current Time
-            // var currtemp = data['currently']['temperature'] + "&deg;C";
-            // $('#currtemp').html(currtemp);
+            // Temperature Row on the Table Javascript
+            // Current Time
+            var currtemp = data['currently']['temperature'] + "&deg;C";
+            $('#currtemp').html(currtemp);
+
+            // One Hour Later
+            var onehourtemp = data['hourly']['data'][1]['temperature'] + "&deg;C";
+            $('#onehourtemp').html(onehourtemp);
+
+            // Two Hours Later
+            var twohourtemp = data['hourly']['data'][2]['temperature'] + "&deg;C";
+            $('#twohourtemp').html(twohourtemp);
+
+            // Three Hours Later
+            var threehourtemp = data['hourly']['data'][3]['temperature'] + "&deg;C";
+            $('#threehourtemp').html(threehourtemp);
 
 
           });
