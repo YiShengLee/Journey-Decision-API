@@ -125,6 +125,23 @@ $(document).ready(function () {
             var threehourwea = data['hourly']['data'][3]['summary'];
             $('#threehourwea').html(threehourwea);
 
+            // Humidity Row on the Table Javascript
+            // Current Humidity
+            var currhum = data['currently']['humidity']*100 + "%";
+            $('#currhum').html(currhum);
+
+            // One Hour Later Humidity
+            var onehourhum = data['hourly']['data'][1]['humidity']*100 + "%";
+            $('#onehourhum').html(onehourhum);
+
+            // Two Hour Later Humidity
+            var twohourhum = data['hourly']['data'][2]['humidity']*100 + "%";
+            $('#twohourhum').html(twohourhum);
+
+            // Three Hour Later Humidity
+            var threehourhum = data['hourly']['data'][3]['humidity']*100 + "%";
+            $('#threehourhum').html(threehourhum);
+
           });
 
           var marker = new google.maps.Marker({
