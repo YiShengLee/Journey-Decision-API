@@ -91,22 +91,39 @@ $(document).ready(function () {
             // console.log(threehrs);
             
             // Temperature Row on the Table Javascript
-            // Current Time
+            // Current Temperature
             var currtemp = data['currently']['temperature'] + "&deg;C";
             $('#currtemp').html(currtemp);
 
-            // One Hour Later
+            // One Hour Later Temperature
             var onehourtemp = data['hourly']['data'][1]['temperature'] + "&deg;C";
             $('#onehourtemp').html(onehourtemp);
 
-            // Two Hours Later
+            // Two Hours Later Temperature
             var twohourtemp = data['hourly']['data'][2]['temperature'] + "&deg;C";
             $('#twohourtemp').html(twohourtemp);
 
-            // Three Hours Later
+            // Three Hours Later Temperature
             var threehourtemp = data['hourly']['data'][3]['temperature'] + "&deg;C";
             $('#threehourtemp').html(threehourtemp);
 
+
+            // Weather Row on the Table Javascript
+            // Current Weather
+            var currwea = data['currently']['summary'];
+            $('#currwea').html(currwea);
+
+            // One Hour Later Weather
+            var onehourwea = data['hourly']['data'][1]['summary'];
+            $('#onehourwea').html(onehourwea);
+
+            // Two Hour Later Weather
+            var twohourwea = data['hourly']['data'][2]['summary'];
+            $('#twohourwea').html(twohourwea);
+
+            // Three Hour Later Weather
+            var threehourwea = data['hourly']['data'][3]['summary'];
+            $('#threehourwea').html(threehourwea);
 
           });
 
