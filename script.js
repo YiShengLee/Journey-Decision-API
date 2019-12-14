@@ -31,8 +31,10 @@ $(document).ready(function () {
     $.ajax({
       url: url,
       success: function (result) {
-        // console.log(result["results"][0]["geometry"]["location"]);
-        // console.log(google.maps.GeocoderStatus);
+        // console.log(result);
+        var address = result['results'][0]['address_components'][0]['long_name'] + " " + result['results'][0]['address_components'][1]['long_name'] + " " + "Weather Report";
+        $('#tableHeader').html(address);
+        // console.log(address);
 
 
         if (google.maps.GeocoderStatus.OK == "OK") {
@@ -51,38 +53,15 @@ $(document).ready(function () {
             // });
 
             // Date Javascript
-            var test = data['currently']['time'];
-            let date = dayjs.unix(test);
-            console.log(date.format());
+            var curr = data['currently']['time'];
+            
+            let date = dayjs.unix(curr).format("dddd, D MMMM YYYY");
+            let time = dayjs.unix(curr).format("HH:mm:ss");
 
+            console.log(date);
+            console.log(time);
             
-            // function convertTimestamp(timestamp) {
-            //   var d = new Date(timestamp * 1000),	// Convert to milliseconds
-            //     yyyy = d.getFullYear(),
-            //     mm = ('0' + (d.getMonth() + 1)).slice(-2),	// Months are zero based. Add leading 0.
-            //     dd = ('0' + d.getDate()).slice(-2),			// Add leading 0.
-            //     hh = d.getHours(),
-            //     h = hh,
-            //     min = ('0' + d.getMinutes()).slice(-2),		// Add leading 0.
-            //     ampm = 'AM',
-            //     time;
-                  
-            //   if (hh >= 12) {
-            //     h = hh - 12;
-            //     ampm = 'PM';
-            //   } else if (hh == 0) {
-            //     h = 12;
-            //   }
-              
-            //   // ie: 2013-02-18, 8:35 AM	
-            //   time = dd + '-' + mm + '-' + yyyy + ', ' + h + ':' + min + ' ' + ampm;
-                
-            //   return time;
-            // }
-            
-            // var unixNow = convertTimestamp((new Date()) / 1000);
-            // console.log(unixNow);
-            // document.write(convertTimestamp(unixNow));
+
 
           });
 
@@ -379,5 +358,5 @@ $("#toggle1").click(function () {
 
 $("#toggle2").click(function () {
   $("#table").toggle();
-  $("#table1").toggle();
+  $("#tableHeader").toggle();
 });

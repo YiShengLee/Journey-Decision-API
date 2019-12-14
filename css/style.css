@@ -405,6 +405,9 @@ height: 15px; */
 @font-face {
   font-family: 'BeautyMountains';
   src: url('/Project\ 2/fonts/BeautyMountains.ttf');
+  font-family: 'Humble';
+  src: url('/Project\ 2/fonts/Humble.ttf');
+
 }
 
 /* --Set the weather Legend Section--*/
@@ -520,6 +523,12 @@ table, th, td {
 th, td {
   padding: 5px;
   text-align: center;
+}
+
+.tableHeader{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Humble";
 }
 
 
