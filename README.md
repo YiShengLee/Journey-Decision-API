@@ -141,10 +141,13 @@ Manual testing was conducted to ensure the user story objectives where achieved.
     * Ensure address can be key in postal code or street name.
     * Ensure display of map is correct.
     * Ensure the address is displayed correctly.
+    * Ensure toggle of the button will hide the map properly.
 4. Table Section <p></p>
     * Ensure the API display the correct information in the correct column and row.
     * Ensure the font size of the table change with various platform.
     * Ensure the table data is displayed properly when different location is search.
+    * Ensure the time is shown correctly in desire format.
+    * Ensure toggle of the button will hide the table properly.
 
 
 
