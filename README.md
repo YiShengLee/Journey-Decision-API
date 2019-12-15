@@ -49,25 +49,66 @@ The website has been designed to be display nicely on all form of devices (TV, l
 <li>Clickable link on the social media section at the end of the page</li>
 </ul>
 
-### TV and Desktop Version
+#### TV and Desktop Version
 <ul>
 <li>The website will be display in column layout</li>
 <li>Legend will be display 5 in a row</li>
 </ul>
 
-### Tablet Version
+#### Tablet Version
 <ul>
 <li>The website will be display in column layout</li>
 <li>Legend will be display 2 in a row</li>
 </ul>
 
-### Mobile Version
+#### Mobile Version
 <ul>
 <li>The website will be display in row layout</li>
 <li>Legend will be display 2 in a row</li>
 <li>Font size of the header will be reduced</li>
 <li>Font size of the table and the address will be reduced</li>
 </ul>
+
+### Future features
+* Redefine the table format
+* Add Haze API
+* Include more infographic for weather
+
+
+## Technologies used
+Below are a list of the programming languages, technologies and frameworks used for this website.
+* HTML5
+* CSS3
+* Script
+* Markdown
+    * Used to write the README file
+* [Bootstrap 4.3.1 framework](https://getbootstrap.com/)
+    * The website uses Bootstrap framework for it's grid system, button styling and responsive bar
+* Javascript
+* jQuery
+* Visual Studio Code
+* [Google Fonts](https://fonts.google.com/)
+* [Font Space](https://www.fontspace.com/)
+* [GitHub](https://github.com/)
+* [Font Awesome](https://fontawesome.com/)
+    * For social media icons and Glyphicons
+* [Favicon](https://www.favicon-generator.org/)
+    * Generate website app icon
+* [Skycons](https://darkskyapp.github.io/skycons/)
+    * Moveable weather icons
+* Google Chrome Developer Tools
+
+#### API Used
+* [Google Maps](https://developers.google.com/maps/documentation)
+    * Able to search location
+* [Dark Sky](https://darksky.net/dev)
+    * Weather information
+* [Ipapi](https://ipapi.co/#api)
+    * Current location of the user
+
+
+
+
 
 
 
