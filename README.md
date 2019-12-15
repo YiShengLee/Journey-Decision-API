@@ -33,7 +33,9 @@ Milstones had to be set in order to finish this project Below are steps by steps
 </ol>
 
 ## Features
-Features on this website are:
+The website has been designed to be display nicely on all form of devices (TV, laptop, tablet and mobile).
+
+### Features on this website are:
 <ul>
 <li>Automatically detect your current location and display the correct maps, temperature (&deg;C or F), weather icon, weather status and date</li>
 <li>Movable legend icon</li>
@@ -43,8 +45,34 @@ Features on this website are:
 <li>User able to know the weather forcast of their address input</li>
 <li>User able to toggle on or off the map and the table</li>
 <li>Hovering over the search button give a darker color display</li>
+<li>After search button is clicked, the desired address will be shown</li>
 <li>Clickable link on the social media section at the end of the page</li>
 </ul>
+
+### TV and Desktop Version
+<ul>
+<li>The website will be display in column layout</li>
+<li>Legend will be display 5 in a row</li>
+</ul>
+
+### Tablet Version
+<ul>
+<li>The website will be display in column layout</li>
+<li>Legend will be display 2 in a row</li>
+</ul>
+
+### Mobile Version
+<ul>
+<li>The website will be display in row layout</li>
+<li>Legend will be display 2 in a row</li>
+<li>Font size of the header will be reduced</li>
+<li>Font size of the table and the address will be reduced</li>
+</ul>
+
+
+
+
+
 
 
 
