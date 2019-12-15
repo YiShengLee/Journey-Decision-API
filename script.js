@@ -31,7 +31,6 @@ $(document).ready(function () {
     $.ajax({
       url: url,
       success: function (result) {
-        // console.log(result);
         var address = result['results'][0]['address_components'][0]['long_name'] + " " + result['results'][0]['address_components'][1]['long_name'] + " " + "Weather Report";
         $('#tableHeader').html(address);
         // console.log(address);
@@ -45,7 +44,7 @@ $(document).ready(function () {
           // console.log(newurl);
 
           $.getJSON(newurl, function (data) {
-            console.log(data);
+            // console.log(data);
             var summary = data["currently"]["summary"];
 
             // map.addListener('bounds_changed', function() {

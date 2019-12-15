@@ -486,6 +486,7 @@ height: 15px; */
   justify-content: center; */
   text-align: center;
   font-size: 15px;
+  padding-top: 4px;
 }
 
 
@@ -589,6 +590,13 @@ td {
   .twohourhum,
   .threehourhum{
     font-size: 10px;
+  }
+  .end_message_icon{
+    font-size: 1px;
+  }
+  .endtext{
+    font-size: 10px;
+    text-align: center;
   }
 }
 
