@@ -2,7 +2,7 @@
 ## **Project 2: Interact Front-End Development** 
 
 ## Introduction
-This project is to allow us to able to pull information from API and display it in our own website by using HTML, CSS and Javascript. This project is a website to allow any user to make a decision if they should travel to their own desination. This website will showcase the current location weather and the final destination weather. The one page application for weather information can be found **[here](https://yishenglee.github.io/Journey-Decision-API/)**
+This project is to allow us to able to pull information from API and display it in our own website by using HTML, CSS and Javascript. This project is a website to allow any user to make a decision if they should travel to their own desination. This website will showcase the current location weather and the final destination weather. The one page application for weather information can be found **[here](https://yishenglee.github.io/Journey-Decision-API/)** **[!Please disable adblock to work!]** 
 
 ![Thumbnail -img](https://github.com/YiShengLee/Journey-Decision-API/raw/master/images/cover.png)
 <!-- <p>&nbsp;</p>  -->
