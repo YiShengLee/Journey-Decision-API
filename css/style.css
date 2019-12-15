@@ -380,7 +380,7 @@ height: 15px; */
 
 
 .header {
-  background: url(/Project\ 2/images/Worldmap.jpg);
+  background: url(/Project_2/images/Worldmap.jpg);
   display: flex;
   justify-content: center;
 }
@@ -404,9 +404,9 @@ height: 15px; */
 /* font type word */
 @font-face {
   font-family: 'BeautyMountains';
-  src: url('/Project\ 2/fonts/BeautyMountains.ttf');
+  src: url('/Project_2/fonts/BeautyMountains.ttf');
   font-family: 'Humble';
-  src: url('/Project\ 2/fonts/Humble.ttf');
+  src: url('/Project_2/fonts/Humble.ttf');
 
 }
 

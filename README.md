@@ -69,12 +69,6 @@ The website has been designed to be display nicely on all form of devices (TV, l
 <li>Font size of the table and the address will be reduced</li>
 </ul>
 
-### Future features
-* Redefine the table format
-* Add Haze API
-* Include more infographic for weather
-
-
 ## Technologies used
 Below are a list of the programming languages, technologies and frameworks used for this website.
 * HTML5
@@ -107,8 +101,50 @@ Below are a list of the programming languages, technologies and frameworks used 
     * Current location of the user
 
 
+## Future Features to implement:
+In future, I would like to:
+* Redefine the table format
+* Add Haze API
+* Include more infographic for weather
 
+## Testing
+This site is tested to be responsive on the following devices:
+* iphone 6/7/8
+* ipad
+    * Safari
+* Samsung Galaxy 8
+    * Google Chrome
+    * Samsung web browser
+* Ubuntu 18.0
+    * Google Chrome
+* Window 10
+    * Google Chrome
+    * Firefox
+    * Microsoft Edge
+    * Internet Explorer 11
+* Window 7
+    * Google Chrome
+    * Internet Explorer 11 
 
+<span><br></span>
+Manual testing was conducted to ensure the user story objectives where achieved. <p></p>
+1. Weather Display <p></p>
+    * Ensure the weather icon display properly for current, one day later , two days later, three days later, four days later.
+    * Ensure all the icons display with the information and able to move.
+    * Ensure the country displayed is correct.
+    * Ensure the flag icon display is corresponding with the country.
+    * Ensure the current temperature change with different location.
+    * Ensure the date display in the correct format.
+2. Icon Display <p></p>
+    * Ensure the legend section is display correctly in different platform.
+3. Map Section <p></p>
+    * Ensure address can be key in postal code or street name.
+    * Ensure display of map is correct.
+    * Ensure the address is displayed correctly.
+4. Table Section <p></p>
+    * Ensure the API display the correct information in the correct column and row.
+    * Ensure the font size of the table change with various platform.
+    * Ensure the table data is displayed properly when different location is search.
 
 
 
