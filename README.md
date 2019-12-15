@@ -149,9 +149,37 @@ Manual testing was conducted to ensure the user story objectives where achieved.
     * Ensure the time is shown correctly in desire format.
     * Ensure toggle of the button will hide the table properly.
 
+## Deployment
+The website was created using Visual Studio Code using BASH. Git was used for version control and pushed to a repository hosted on [Github](https://github.com/).
 
+The website is deployed using Github pages [Lee Yi Sheng](https://github.com/YiShengLee/Journey-Decision-API).
 
+### How to deploy the code locally
+If you wish to run this code locally then please follow the instructions below.
+1. Download the code from the Github repository at [https://github.com/YiShengLee/Journey-Decision-API](https://github.com/YiShengLee/Journey-Decision-API).
+2.	Click on Clone or download then Download ZIP. This will download the code into a ZIP folder locally on your computer.
+3.	Uncompress the ZIP folder.
 
+## Credits
+
+### Code
+* [w3schools](https://www.w3schools.com/)
+    * Grid Layout
+    * Media Query
+    * Jquery
+
+### Images
+All images for this web site are being used under free commercial license from:
+* [ShutterStock](https://www.google.com.sg/)
+* [Unsplash](https://unsplash.com/)
+* [Pixabay](https://pixabay.com/)
+* [Pexels](https://www.pexels.com/)
+
+### Icons
+The icons for the buttons where sourced under free commercial license from [Font](https://fontawesome.com/).
+* [Youtube Icon](https://fontawesome.com/icons/youtube-square?style=brands)
+* [Facebook Icon](https://fontawesome.com/icons/facebook-square?style=brands)
+* [LinkedIn Icon](https://fontawesome.com/icons/linkedin?style=brands)
 
 
 
