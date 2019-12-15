@@ -176,7 +176,7 @@ $.getJSON('https://ipapi.co/json/', function (ipaddress) {
   // console.log(ipaddress);
   var country = ipaddress.country_name;
   // Display flag image
-  var flag = "/images/Flag_icons/" + country + ".png";
+  var flag = "images/Flag_icons/" + country + ".png";
   // var flag = "/Project 2/images/Flag_icons/" + "malaysia.png";
   latitudeCurrent = ipaddress.latitude;
   longtitudeCurrent = ipaddress.longitude;
